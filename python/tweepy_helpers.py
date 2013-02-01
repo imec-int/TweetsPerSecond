@@ -39,7 +39,7 @@ def stream(stream_type, config, handle_data):
         stream = tweepy.Stream(auth, StreamHandler(handle_data))
         #try_and_catch_errors(stream.filter(track=config['search_terms']))
         #try_and_catch_errors(stream.filter(track=["tvvv"]))
-        try_and_catch_errors(stream.filter(track=["bieber"]))
+        try_and_catch_errors(stream.filter(track=["#tvvv"]))
 
 def get_oauth(config):
     auth = tweepy.OAuthHandler(config['consumer_key'], config['consumer_secret'])

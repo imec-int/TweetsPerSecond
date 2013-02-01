@@ -13,6 +13,8 @@ import pusher
 
 count = 0
 
+TIMEUNIT = 60.0 # how many second to watch
+
 def handle_data(data):
     global count
     
@@ -31,7 +33,7 @@ def send_data():
 
     count = 0
 
-    Timer(1.0, send_data).start()
+    Timer(TIMEUNIT, send_data).start()
 
 #config_path = os.path.dirname(sys.argv[0]) + "/config.json"
 config_path = "config.json"
@@ -45,5 +47,5 @@ pusher.secret = config['pusher']['secret'].encode('ascii')
 p = pusher.Pusher()
 
 print "Recording filter %s..." % config['search_terms']
-thread = Timer(1.0, send_data).start()
+thread = Timer(TIMEUNIT, send_data).start()
 tweepy_helpers.stream('filter', config, handle_data)
