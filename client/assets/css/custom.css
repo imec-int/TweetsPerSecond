@@ -1,7 +1,16 @@
 #whale {
-	margin: auto;
+	margin-left: auto;
 	margin-right: auto;
 	background: url(http://sierraclub.typepad.com/photos/uncategorized/2008/04/29/singing_whale_thumbnail.jpg);
 	background-repeat: no-repeat;
+	background-size: contain;
 	height: 80%;
+	width: 50%;
+}
+
+#container{
+	margin-left: auto;
+	margin-right: auto;
+	height: 100%;
+	width: 100%;
 }
