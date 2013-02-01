@@ -1,0 +1,21 @@
+{
+    "search_terms": "bieber",
+    "update_interval_secs": 1,    
+    "twitter_auth": {
+        "username": "",
+        "password": "",
+        "consumer_key": "",
+        "consumer_secret": "",
+        "access_key": "",
+        "access_secret": ""
+    },
+    "pusher": {
+        "app_id": "",
+        "key": "",
+        "secret": ""
+    },
+    "error_email": {
+        "from": "",
+        "to": ""
+    }
+}

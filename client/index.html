@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <style type="text/css">
+    body { padding-top: 60px; padding-bottom: 40px;}
+    .chart rect { fill: steelblue; stroke: white; }
+    .count { text-align: right; }
+    footer { margin-top: 70px; }
+    /* font-family:'Rockwell W01'; */
+    footer a {  font-weight: bold; }
+    footer a:hover { text-decoration: none; }
+    footer a span.nixon { color: #D7E035; }
+    footer a span.mcinnes { color: #44A2BB; }
+    footer div.logos{ text-align: right; }
+    footer div.logos a{ margin-left: 5px; }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+      <div class="hero-unit">
+        <h1>Number of #tvvv Tweets<br/><small>updated every second</small></h1>
+      </div>
+      <div class="row">
+        <div class="span8 offset2" id="chart"></div>
+      </div>
+      <div class="row">
+        <div class="span2 offset8 count"><p><span class="current badge badge-info">0</span><span class="max badge badge-error">0</span></p></div>
+      </div>
+      
+      <footer class="footer">
+        <div class="row">
+          <div class="span3">
+            <p>Adapted from <a href="http://www.nixonmcinnes.co.uk"><span class="nixon">Nixon</span><span class="mcinnes">McInnes</span></a></p>
+          </div>
+          <div class="span3 offset6 logos">
+            <a href="http://pusher.com/" alt="Powered by Pusher"><img src="assets/images/pusher.png" alt="Powered by Pusher"/></a>
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    
+    <script src="http://js.pusher.com/1.11/pusher.min.js"></script>
+    <script src="assets/vendor/d3.v2/d3.v2.js"></script>
+    <script src="assets/js/main.js"></script>
+    
+    <!-- Google Analytics -->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-38125637-1');
+        ga('send', 'pageview');
+
+    </script>
+    <!-- End Google Analytics -->
+</body>
+
+</html>

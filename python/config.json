@@ -1,0 +1,21 @@
+{
+    "search_terms": "['tvvv']",
+    "update_interval_secs": 1,    
+    "twitter_auth": {
+        "username": "cast42",
+        "password": "passwd",
+        "consumer_key": "BxvmW3AZwTzV7kh1P4UFA",
+        "consumer_secret": "n98cimzDFEQ2YiQIKvTk1uASHEDJMHcVffX7BI7LYQc",
+        "access_key": "1731841-iXEn9ADuQZGDdzGwDWOOe9VW63UDqcsCgeBIDr7SdN",
+        "access_secret": "vTzWQqLGrAApON6FraGP2BH8vG91RHjoQLvd4JbEc"
+    },
+    "pusher": {
+        "app_id": "36455",
+        "key": "47e436290d1bbcdb5922",
+        "secret": "d4bc7a1e5a8b42ae1a47"
+    },
+    "error_email": {
+        "from": "cast42@gmail.com",
+        "to": "cast42@gmail.com"
+    }
+}
