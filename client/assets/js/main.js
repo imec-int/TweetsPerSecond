@@ -82,7 +82,10 @@ chart.selectAll("rect")
     .attr("x", function(d, i) { return x(i) - .5; })
     .attr("y", function(d) { return h - y(d.value) - .5; })
     .attr("width", w)
-    .attr("height", function(d) { return y(d.value); });
+    .attr("height", function(d) { return y(d.value); })
+    .attr("fill", function(d) {
+        return "rgb(0, 0, " + (d.value * 50) + ")";
+    });
 
 chart.append("line")
     .attr("x1", 0)
@@ -90,6 +93,8 @@ chart.append("line")
     .attr("y1", h - .5)
     .attr("y2", h - .5)
     .style("stroke", "#000");
+
+
 
 // ====================================
 // d3 - update the chart
@@ -99,14 +104,21 @@ function redraw() {
     var rect = chart.selectAll("rect")
         .data(data, function(d) { return d.time; });
 
+    var texts = chart.selectAll("text")
+        .data(data, function(d) { return d.time; });
+
     rect.enter().insert("rect", "line")
         .attr("x", function(d, i) { return x(i + 1) - .5; })
         .attr("y", function(d) { return h - y(d.value) - .5; })
         .attr("width", w)
         .attr("height", function(d) { return y(d.value); })
+        .attr("fill", function(d) {
+            return "rgb(" + (y(d.value) * 1) + ",10,0)";
+        })
         .transition()
         .duration(800)
         .attr("x", function(d, i) { return x(i) - .5; });
+        
 
     rect.transition()
         .duration(800)
@@ -118,4 +130,6 @@ function redraw() {
         .duration(800)
         .attr("x", function(d, i) { return x(i - 1) - .5; })
         .remove();
+
+
 }
