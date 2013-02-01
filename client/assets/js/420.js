@@ -1,4 +1,3 @@
-
-$(window).resize(function() {
-  console.log("wadde");
-});
+setTimeout(function(){
+	window.location.href = "index.html"
+},3000);
