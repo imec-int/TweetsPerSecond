@@ -22,6 +22,7 @@ channel.bind('my-event', function(update) {
 });
 
 pusher.connection.bind( 'error', function( err ) { 
+  console.log("error "+err.data.code)
   if( err.data.code === 4004 ) {
     log('>>> detected limit error');
     window.location.href = "420.html"
